@@ -1,69 +1,151 @@
-# React + TypeScript + Vite
+# 🍽️ SEA Catering
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> **"Healthy Meals, Anytime, Anywhere"**
 
-Currently, two official plugins are available:
+A modern, responsive web application for SEA Catering - a customizable healthy meal service with delivery across Indonesia. Built with React, TypeScript, and Vite for optimal performance and user experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![SEA Catering](https://placehold.co/800x400/667eea/white?text=SEA+Catering+Website)
 
-## Expanding the ESLint configuration
+## 🌟 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🎯 **Core Functionality**
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
+- **Modern UI/UX** - Clean, professional design with smooth animations
+- **Interactive Menu** - Browse 6 different meal plans with detailed pricing
+- **Subscription System** - Complete subscription flow with plan selection
+- **Customer Testimonials** - Real-time testimonial submission and display
+- **Contact Forms** - Multiple contact methods with form validation
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+### 🚀 **Technical Features**
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **React 18** with TypeScript for type safety
+- **React Router** for client-side navigation
+- **Responsive CSS Grid & Flexbox** layouts
+- **Mobile-First Design** approach
+- **Vercel Speed Insights** for performance monitoring
+- **SEO-Friendly** routing structure
+
+## 🏗️ **Project Structure**
+
+```
+sea-catering/
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── components/
+│   │   ├── Contact.tsx      # Contact page with form and info
+│   │   ├── Homepage.tsx     # Landing page with hero section
+│   │   ├── Menu.tsx         # Meal plans showcase
+│   │   ├── Navbar.tsx       # Navigation component
+│   │   ├── Subscription.tsx # Subscription plans and signup
+│   │   └── Testimonials.tsx # Customer reviews system
+│   ├── App.css             # Main stylesheet
+│   ├── App.tsx             # Main app component with routing
+│   ├── index.css           # Global styles
+│   └── main.tsx            # Application entry point
+├── vercel.json             # Vercel deployment configuration
+├── package.json            # Dependencies and scripts
+└── README.md              # This file
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 **Getting Started**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### **Prerequisites**
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Make sure you have the following installed on your system:
+
+- **Node.js** (version 22.0)
+- **npm** package manager
+- **Git** for version control
+
+### **Installation**
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/darrenjo/sea-catering.git
+   cd sea-catering
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   ```
+   Navigate to http://localhost:5173
+   ```
+
+## 📦 **Available Scripts**
+
+| Script            | Description                                    |
+| ----------------- | ---------------------------------------------- |
+| `npm run dev`     | Starts the development server with hot reload  |
+| `npm run build`   | Builds the app for production to `dist` folder |
+| `npm run preview` | Preview the production build locally           |
+| `npm run lint`    | Run ESLint to check code quality               |
+
+## 🎨 **Customization**
+
+### **Styling**
+
+- All styles are contained in `src/App.css`
+- Uses CSS custom properties for easy theme customization
+- Mobile-first responsive design with breakpoints:
+  - Mobile: `≤ 767px`
+  - Tablet: `768px - 1023px`
+  - Desktop: `≥ 1024px`
+
+### **Content**
+
+- Meal plans can be modified in `src/components/Menu.tsx`
+- Contact information is in `src/components/Contact.tsx`
+- Hero content is in `src/components/Homepage.tsx`
+
+### **Colors & Branding**
+
+Main brand colors used throughout the application:
+
+- **Primary Gradient**: `#667eea` to `#764ba2`
+- **Secondary Gradient**: `#ffecd2` to `#fcb69f`
+- **Background**: `#f8f9fa`
+- **Text**: `#333` and `#555`
+
+## 📱 **Pages Overview**
+
+| Page             | Route           | Description                                     |
+| ---------------- | --------------- | ----------------------------------------------- |
+| **Homepage**     | `/`             | Landing page with hero section and key features |
+| **Menu**         | `/menu`         | Display of 6 meal plans with pricing            |
+| **Subscription** | `/subscription` | Three-tier subscription plans with signup       |
+| **Testimonials** | `/testimonials` | Customer reviews with submission form           |
+| **Contact**      | `/contact`      | Contact information and inquiry form            |
+
+## 🛠️ **Built With**
+
+### **Core Technologies**
+
+- **React 18** - JavaScript library for building user interfaces
+- **TypeScript** - Typed superset of JavaScript
+- **Vite** - Fast build tool and development server
+- **React Router** - Client-side routing for React
+
+### **Development Tools**
+
+- **ESLint** - Code linting and quality checks
+- **Vercel Speed Insights** - Performance monitoring
+
+### **Styling**
+
+- **CSS3** with Flexbox and Grid
+- **CSS Custom Properties** for theming
+- **Responsive Design** principles
